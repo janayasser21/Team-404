@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Management</title>
+    <link rel="stylesheet" href="openClose.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Bank</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <!-- <li><a href="#">Open Account</a></li>
+            <li><a href="#">Close Account</a></li>
+            Other navigation links -->
+          </ul>
+        </nav>
+      </header>
+    
+      <main>
+        <section id="open-account">
+          <h2>Open a Bank Account</h2>
+          <form id="open-account-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <button type="submit">Open Account</button>
+          </form>
+        </section>
+    
+        <section id="close-account">
+          <h2>Close a Bank Account</h2>
+          <form id="close-account-form">
+            <label for="account-number">Account Number:</label>
+            <input type="text" id="account-number" name="account-number" required>
+    
+            <button type="submit">Close Account</button>
+          </form>
+        </section>
+      </main>
+    
+      <!-- <footer>
+        <p>&copy; 2023 Bank. All rights reserved.</p>
+      </footer> -->
+    
+      <script src="script.js"></script>
+</body>
+</html>
