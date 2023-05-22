@@ -73,12 +73,12 @@ header{
 }
 .navigation .btnRegister-popup:hover{
     background: #fff;
-    color: aliceblue;
+    color: black;
 }
 .wrapper{
     position: relative;
     width: 400px;
-    height: 440px;
+    height: 460px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 20px;
@@ -87,6 +87,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateY(20px);
     /* overflow: hidden;
     transform: scale(0);
     transition: transfrom .5s ease, height .2s ease; */
@@ -146,7 +147,7 @@ header{
 }
 .input-box input:focus~label,
 .input-box input:valid~label{
-    top: 0 px;
+    top: -5 px;
 }
 .input-box input{
     width: 100%;
@@ -191,6 +192,7 @@ header{
     margin: -15px 0 15px;
     display: flex;
     justify-content: space-between;
+    margin-left: 20px;
 }
 .remember-forgot label input{
     accent-color: aliceblue;
@@ -210,6 +212,7 @@ header{
     font-size: 1em;
     color: aliceblue;
     font-weight: 500;
+    text-align: center;
     /* pointer-events: none; */
     /* transition: .5s; */
 
@@ -223,6 +226,7 @@ text-decoration: underline;
     text-align: center;
     font-weight: 500;
     margin: 4px 0;
+    margin-top: -10px;
 }
 .login-register p a{
     color: aliceblue;

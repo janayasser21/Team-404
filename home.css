@@ -73,7 +73,7 @@ header{
 }
 .navigation .btnRegister-popup:hover{
     background: #fff;
-    color: #162938;
+    color: black;
 }
 .clients-btn{
     display: flex;
@@ -83,8 +83,8 @@ header{
 .btn{
     width: 100%;
     height: 45px;
-    background: #162938;
-    border: 1px solid #fff;
+    background: transparent;
+    border: 2px solid #fff;
     outline: none;
     border-radius: 1em;
     cursor: pointer;
@@ -98,7 +98,8 @@ header{
     text-align: center;
 }
 .btn:hover {
-    background-color: #e0e0e0;
+    background-color: white;
+    color: black;
 }
 .btn:focus,
 .btn:active {
