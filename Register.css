@@ -78,7 +78,7 @@ header{
 .wrapper{
     position: relative;
     width: 400px;
-    height: 460px;
+    height: 500px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 20px;
@@ -147,7 +147,7 @@ header{
 }
 .input-box input:focus~label,
 .input-box input:valid~label{
-    top: -5 px;
+    top: -5px;
 }
 .input-box input{
     width: 100%;

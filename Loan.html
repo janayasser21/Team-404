@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Management</title>
+    <link rel="stylesheet" href="Open.css">
+</head>
+<body>
+    <header>
+      <h2 class="logo"><img src="logo.png" alt="Our Logo" width="250" height="100" style="position: absolute; top: 0; left: 0;"></h2>
+      <nav class="navigation">
+          <a href="home.html">Home</a>
+          <a href="#">Services</a>
+          <a href="AboutUs.html">About us</a>
+          <a href="#">Contact us</a>
+          <button onclick = "location.href ='index.html'" class="btnRegister-popup">Logout</button>
+      </nav>
+      </header>
+      <div class="wrapper" style="height: 630px;">
+        <div class="form-box Register">
+          <h2 style="color: aliceblue; font-size: 34px; margin-top: 20px;">Loan Application</h2>
+          <form action="#">
+            <div class="input-box">
+                <input type="text" required>
+                <label>Full Name</label>
+            </div>
+            <!-- <div class="input-box">
+                <input type="email" required>
+                <label>Email</label>
+            </div> -->
+            <div class="input-box">
+                <input type="tel" required>
+                <label>Phone</label>
+            </div>
+            <div class="input-box">
+                <input style="padding-left: 100px;" type="date" required>
+                <label>Start Date</label>
+            </div>
+            <div class="input-box">
+                <input style="padding-left: 100px;" type="date" required>
+                <label>End Date</label>
+            </div>
+            <div class="input-box">
+                <input type="text" required>
+                <label>Social Security Number</label>
+            </div>
+            <div class="input-box">
+                <input type="text" required>
+                <label>Type (Personal or Car)</label>
+            </div>
+            <div class="input-box">
+                <input type="text" required>
+                <label>Amount</label>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>
