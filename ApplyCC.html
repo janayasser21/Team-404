@@ -17,46 +17,38 @@
           <button onclick = "location.href ='index.html'" class="btnRegister-popup">Logout</button>
       </nav>
       </header>
-      <div class="wrapper" style="height: 640px;">
+      <div style="height: 570px;" class="wrapper">
         <div class="form-box Register">
-          <h2 style="color: aliceblue; font-size: 34px; margin-top: 20px;">Loan Application</h2>
+          <h2 style="color: aliceblue; font-size: 30px;">Application</h2>
           <form action="#">
             <div class="input-box">
                 <input type="text" required>
                 <label>Full Name</label>
             </div>
-            <!-- <div class="input-box">
+            <div class="input-box">
                 <input type="email" required>
                 <label>Email</label>
-            </div> -->
-            <div class="input-box">
-                <input type="tel" required>
-                <label>Phone</label>
             </div>
             <div class="input-box">
-                <input style="padding-left: 100px;" type="date" required>
-                <label>Start Date</label>
-            </div>
-            <div class="input-box">
-                <input style="padding-left: 100px;" type="date" required>
-                <label>End Date</label>
+                <input type="password" required>
+                <label>Password</label>
             </div>
             <div class="input-box">
                 <input type="text" required>
-                <label>Social Security Number</label>
+                <label>Address</label>
+            </div>
+            <div class="input-box">
+                <input type="date" required>
+                <label class="date-label">Date of Birth</label>
             </div>
             <div class="input-box">
                 <div style="margin-top: 30px;" class="input-box">
-                <select name="Applications" class="dropdown"> 
-                    <option value="choose">Choose Type</option>
-                    <option value="theft">Car</option>
-                    <option value="lost">Personal</option>
-                </select>
-            </div>
-            </div>
-            <div class="input-box">
-                <input type="text" required>
-                <label>Amount</label>
+                    <select name="Applications" class="dropdown"> 
+                        <option value="choose">Gender</option>
+                        <option value="theft">Male</option>
+                        <option value="lost">Female</option>
+                    </select>
+                </div>
             </div>
             <button type="submit" class="btn">Submit</button>
           </form>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Open.css">
+    <title>Credit Card Transactions</title>
+    <style>
+        table {
+        border-collapse: collapse;
+        width: 60%;
+        transform: translateX(-250px);
+        }
+
+        th, td {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        color: aliceblue;
+        }
+
+        th {
+        background-color: transparent;
+        color: aliceblue;
+        }
+    </style>
+ </head>
+<body>
+    <header>
+      <h2 class="logo"><img src="logo.png" alt="Our Logo" width="250" height="100" style="position: absolute; top: 0; left: 0;"></h2>
+      <nav class="navigation">
+          <a href="home.html">Home</a>
+          <a href="AboutUs.html">About us</a>
+          <a href="ContactUs.html">Contact us</a>
+          <button onclick = "location.href ='index.html'" class="btnRegister-popup">Logout</button>
+      </nav>
+      </header>
+      <h1 style="color: aliceblue; transform: translateY(-190px);">Credit Card Transactions:</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Merchant</th>
+        <th>Amount</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2023-05-01</td>
+        <td>Amazon</td>
+        <td>$59.99</td>
+        <td>Approved</td>
+      </tr>
+      <tr>
+        <td>2023-05-05</td>
+        <td>Netflix</td>
+        <td>$12.99</td>
+        <td>Approved</td>
+      </tr>
+      <tr>
+        <td>2023-05-10</td>
+        <td>Starbucks</td>
+        <td>$4.75</td>
+        <td>Approved</td>
+      </tr>
+      <tr>
+        <td>2023-05-12</td>
+        <td>Apple Store</td>
+        <td>$999.00</td>
+        <td>Approved</td>
+      </tr>
+      <tr>
+        <td>2023-05-15</td>
+        <td>Uber</td>
+        <td>$15.50</td>
+        <td>Approved</td>
+      </tr>
+    </tbody>
+  </table>
+      <script src="script.js"></script>
+</body>
+</html>
