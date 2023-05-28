@@ -75,12 +75,35 @@ header{
     background: #fff;
     color: black;
 }
-.clients-btn{
+.container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: transparent;
+  }
+.h2{
+    text-align: center;
+    background: transparent;
+    /* margin: 20px auto; */
 }
-.btn{
+.textbox-container {
+    /* margin: 20px auto; */
+    width: 400px;
+    background: transparent;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: transparent;
+    color: aliceblue;
+  }
+  /* .btn{
     width: 100%;
     height: 45px;
     background: transparent;
@@ -106,12 +129,23 @@ header{
 .btn:focus,
 .btn:active {
   outline: none;
+} */
+.btn{
+    width: 30%;
+    height: 45px;
+    background:  transparent;
+    border: 2px solid aliceblue;
+    outline: none;
+    border-radius:6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: aliceblue;
+    font-weight: 500;
+    transition: .5s;
+    margin-top: 20px ;
 }
 
-  
-  
-  
-  
-  
-  
-  
+.btn:hover{
+    background-color: aliceblue;
+    color: black;
+}
