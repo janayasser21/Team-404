@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank Management</title>
     <link rel="stylesheet" href="BankerHome.css">
+    <link rel="stylesheet" href="Open.css">
+    <script src="main.js"></script>
     <style>
         a{
             text-decoration: none;
@@ -26,15 +28,61 @@
     </header> 
 
     <div class = "container">
-        <h2>Avaialbe Applications:</h2>
-        <select name="Applications" class="dropdown"> 
-            <option value="Momen">Momen Adel's Application</option>
-            <option value="Batrawy">Mohamed Tarek's Application</option>
-            <option value="Youssef">Youssef Eid's Application</option>
-            <option value="Mohamed">Mohamed Ashraf's Application</option>
-            <option value="Ahmed">Ahmed Shady's Application</option>
-        </select>
+        <h2 style="transform: translateY(0px);">Avaialbe Applications:</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <select name="Applications" id="applicationDropdown" class="dropdown" style="transform: translateY(0px);"> 
+                    <option value="choose">Choose an option</option>
+                </select>
+            </div>
+            <div class="col-md-12">
+                <div class="wrapper" id="wrapper"style="height: 100%;">
+                    <div class="form-box Register">
+                        <form action="#">
+
+                            <div class="input-box">
+                                <input type="text" readonly name="fullName">
+                                <label class="date-label">Full Name</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="tel" readonly name="phone">
+                                <label class="date-label">Phone</label>
+                            </div>
+                            <div class="input-box">
+                                <input style="padding-left: 100px;" type="date" readonly name="startDate">
+                                <label class="date-label">Start Date</label>
+                            </div>
+                            <div class="input-box">
+                                <input style="padding-left: 100px;" type="date" readonly name="endDate">
+                                <label class="date-label">End Date</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" readonly name="ssn">
+                                <label class="date-label">Social Security Number</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" readonly name="type">
+                                <label class="date-label">Type</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" readonly name="amount">
+                                <label class="date-label">Amount</label>
+                            </div>
+                            </div>
+                        </form>
+                   
+                    </div>
+                    <button style="border-radius: 17px; min-width: -webkit-fill-available;" type="submit" onclick="accept()" class="btn">
+                        Accept
+                    </button>
+                    <button style="margin-top: 2px;border-radius: 17px; min-width: -webkit-fill-available;" type="submit" onclick="accept()" class="btn">
+                        Deny
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="loanDropDown.js"></script>
 
 </body>
 </html>

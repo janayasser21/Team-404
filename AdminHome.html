@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank Management</title>
     <link rel="stylesheet" href="BankerHome.css">
+    <link rel="stylesheet" href="Open.css">
     <style>
         a{
             text-decoration: none;
         }
     </style>
+    <script src="main.js"></script>
     
 </head>
 <body>
@@ -25,17 +27,28 @@
         </nav>
     </header> 
 
-        <div class = "container">
-            <h2>Technical Issues:</h2>
-        <select name="Applications" class="dropdown"> 
-            <option value="choose">Choose an option</option>
-            <option value="Momen">Momen Adel's Report</option>
-            <option value="Batrawy">Mohamed Tarek's Report</option>
-            <option value="Youssef">Youssef Eid's Report</option>
-            <option value="Mohamed">Mohamed Ashraf's Report</option>
-            <option value="Ahmed">Ahmed Shady's Report</option>
-        </select>
+    <div class = "container">
+        <h2 style="transform: translateY(0px);">Technical Issues:</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <select name="Applications" id="applicationDropdown" class="dropdown" style="transform: translateY(0px);"> 
+                    <option value="choose">Choose an option</option>
+                </select>
+            </div>
+            <div class="col-md-12">
+                <div class="wrapper" id="wrapper"style="height: 100%;">
+                    <div class="form-box Register">
+                        <form action="#">
+                            <div class="input-box">
+                                <input type="text" name="issue" readonly>
+                                <label class="date-label">Technical Issue</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-
+    </div>
+    <script src="adminDropDown.js"></script>
 </body>
 </html>

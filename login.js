@@ -17,4 +17,5 @@ function validate(){
     else{
         alert("Login Failed");
     }
+    localStorage.setItem('userRole', username);
 }
