@@ -149,3 +149,31 @@ header{
     background-color: aliceblue;
     color: black;
 }
+
+.confirmation-box {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    max-width: 400px;
+    text-align: center;
+    border: 2px solid white;
+    transform: translateY(-60px);
+  }
+
+.confirmation-message {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .confirmation-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+  }

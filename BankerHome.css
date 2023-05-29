@@ -157,3 +157,8 @@ body {
     align-items: center;
     position: inherit;
 }
+
+.wrapper .form-box .loan {
+    /* margin: 10px; */
+    transform: translateX(22px);
+}

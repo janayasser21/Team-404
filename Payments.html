@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <h2 class="logo"><img src="logo.png" alt="Our Logo" width="250" height="100" style="position: absolute; top: 0; left: 0;"></h2>
+        <h2 class="logo"><img src="Logo2.png" alt="Our Logo" width="200" height="60" style="position: absolute; top: 10px; left: 20px;"> </h2>
         <nav class="navigation">
             <a href="home.html">Home</a>
             <a href="AboutUs.html">About us</a>
@@ -27,7 +27,8 @@
     <div style="height: 450px;" class="wrapper">
         <div class="form-box Register">
           <h2 style="color: aliceblue; margin-bottom: 40px;">Payment</h2>
-          <form action="#">
+
+          <form id="myForm">
             <div style="margin-top: 30px;" class="input-box">
                 <select name="Applications" class="dropdown"> 
                     <option value="choose">Choose the Bill</option>
@@ -38,16 +39,47 @@
                 </select>
             </div>
             <div style="margin-top: 30px;" class="input-box">
-                <input type="text" required>
+                <input type="text" id="amount" required>
                 <label>Amount</label>
             </div>
             <div style="margin-top: 30px;" class="input-box">
-                <input type="text" required>
+                <input type="text" id="number" required>
                 <label>Bank Account Number</label>
             </div>
-            <button style="margin-top: 20px;" type="submit" class="btn">Pay</button>
-          </form>
+            <button style="margin-top: 20px;" type="submit" class="btn" onclick="validateForm()">Pay</button>
         </div>
       </div>
+    </form>
+
+    <div id="confirmationOverlay" class="confirmation-overlay" style="display: none;">
+        <div class="confirmation-box">
+          <p id="confirmationMessage" class="confirmation-message"></p>
+          <button class="confirmation-button" onclick="closeConfirmation()">OK</button>
+        </div>
+      </div>
+
+      <script>
+        function validateForm() {
+          var number = document.getElementById("number").value;
+          var amount = document.getElementById("amount").value;
+          //var message = document.getElementById("message").value;
+          var isValid = true;
+
+          if (number === "") 
+            isValid = false;
+   
+          if (amount === "") 
+            isValid = false;
+    
+          if (isValid) {
+            document.getElementById("confirmationMessage").innerText = "Form submitted successfully!";
+            document.getElementById("confirmationOverlay").style.display = "flex";
+            document.getElementById("myForm").reset();
+          }
+        }
+        function closeConfirmation() {
+      document.getElementById("confirmationOverlay").style.display = "none";
+    }
+      </script>
 </body>
 </html>

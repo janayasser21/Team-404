@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-      <h2 class="logo"><img src="logo.png" alt="Our Logo" width="250" height="100" style="position: absolute; top: 0; left: 0;"></h2>
+        <h2 class="logo"><img src="Logo2.png" alt="Our Logo" width="200" height="60" style="position: absolute; top: 10px; left: 20px;"> </h2>
       <nav class="navigation">
           <a href="home.html">Home</a>
           <a href="AboutUs.html">About us</a>
@@ -21,41 +21,73 @@
       <div style="height: 570px;" class="wrapper">
         <div class="form-box Register">
           <h2 style="color: aliceblue; font-size: 30px;">Application</h2>
-          <form action="#" id="creditCardForm">
+
+          <form id="myForm">
             <div class="input-box">
-                <input type="text"  name="fullName" required>
+                <input type="text" id="name" required>
                 <label>Full Name</label>
             </div>
             <div class="input-box">
-                <input type="email" name="email" required>
+                <input type="email" id="mail" required>
                 <label>Email</label>
             </div>
             <div class="input-box">
-                <input type="password"  required>
+                <input type="password" id="pass" required>
                 <label>Password</label>
             </div>
             <div class="input-box">
-                <input type="text" name="address" required>
+                <input type="text" id="address" required>
                 <label>Address</label>
             </div>
-            <div class="input-box" >
-                <input type="date" name="dob" required>
+            <div class="input-box">
+                <input type="date" id="date" required>
                 <label class="date-label">Date of Birth</label>
             </div>
             <div class="input-box" >
                 <div style="margin-top: 30px;" class="input-box">
-                    <select name="Applications" class="dropdown" name="gender"> 
+                    <select name="Applications" id="gender" class="dropdown" required> 
                         <option value="choose">Gender</option>
                         <option value="theft">Male</option>
                         <option value="lost">Female</option>
                     </select>
                 </div>
             </div>
-            <button type="submit" class="btn">Submit</button>
-          </form>
+            <button type="submit" class="btn" onclick="validateForm()">Submit</button>
         </div>
       </div>
-      <script src="script.js"></script>
+    </form>
+
+    <div id="confirmationOverlay" class="confirmation-overlay" style="display: none;">
+        <div class="confirmation-box">
+          <p id="confirmationMessage" class="confirmation-message"></p>
+          <button class="confirmation-button" onclick="closeConfirmation()">OK</button>
+        </div>
+      </div>
+
+      <script>
+        function validateForm() {
+          var name = document.getElementById("name").value;
+          var pass = document.getElementById("pass").value;
+          var mail = document.getElementById("mail").value;
+          var address = document.getElementById("address").value;
+          var gender = document.getElementById("gender").value;
+          var date = document.getElementById("date").value; 
+          var isValid = true;
+
+          if (name === "" || pass === "" || mail === "" || address === "" || gender === "Gender" || date ===  "") 
+            isValid = false;
+    
+          if (isValid) {
+            document.getElementById("confirmationMessage").innerText = "Form submitted successfully!";
+            document.getElementById("confirmationOverlay").style.display = "flex";
+            document.getElementById("myForm").reset();
+          }
+        }
+        function closeConfirmation() {
+      document.getElementById("confirmationOverlay").style.display = "none";
+    }
+      </script>
+      <!-- <script src="script.js"></script> -->
       <script src="dropDown.js"></script>
 </body>
 </html>

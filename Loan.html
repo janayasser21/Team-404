@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-      <h2 class="logo"><img src="logo.png" alt="Our Logo" width="250" height="100" style="position: absolute; top: 0; left: 0;"></h2>
+        <h2 class="logo"><img src="Logo2.png" alt="Our Logo" width="200" height="60" style="position: absolute; top: 10px; left: 20px;"> </h2>
       <nav class="navigation">
           <a href="home.html">Home</a>
           <a href="AboutUs.html">About us</a>
@@ -21,9 +21,10 @@
       <div class="wrapper" style="height: 640px;">
         <div class="form-box Register">
           <h2 style="color: aliceblue; font-size: 34px; margin-top: 20px;">Loan Application</h2>
-          <form action="#">
+
+          <form id="myForm">
             <div class="input-box">
-                <input type="text" required>
+                <input type="text" id="name" required>
                 <label>Full Name</label>
             </div>
             <!-- <div class="input-box">
@@ -31,19 +32,19 @@
                 <label>Email</label>
             </div> -->
             <div class="input-box">
-                <input type="tel" required>
+                <input type="tel" id="phone" required>
                 <label>Phone</label>
             </div>
             <div class="input-box">
-                <input style="padding-left: 100px;" type="date" required>
+                <input style="padding-left: 100px;" type="date" id="Sdate" required>
                 <label>Start Date</label>
             </div>
             <div class="input-box">
-                <input style="padding-left: 100px;" type="date" required>
+                <input style="padding-left: 100px;" type="date" id="Edate" required>
                 <label>End Date</label>
             </div>
             <div class="input-box">
-                <input type="text" required>
+                <input type="text" id="ssn" required>
                 <label>Social Security Number</label>
             </div>
             <div class="input-box">
@@ -56,13 +57,44 @@
             </div>
             </div>
             <div class="input-box">
-                <input type="text" required>
+                <input type="text" id="amount" required>
                 <label>Amount</label>
             </div>
-            <button type="submit" class="btn">Submit</button>
-          </form>
+            <button type="submit" class="btn" onclick="validateForm()">Submit</button>
         </div>
       </div>
-      <script src="script.js"></script>
+    </form>
+
+    <div id="confirmationOverlay" class="confirmation-overlay" style="display: none;">
+        <div class="confirmation-box">
+          <p id="confirmationMessage" class="confirmation-message"></p>
+          <button class="confirmation-button" onclick="closeConfirmation()">OK</button>
+        </div>
+      </div>
+
+      <script>
+        function validateForm() {
+          var name = document.getElementById("name").value;
+          var amount = document.getElementById("amount").value;
+          var ssn = document.getElementById("ssn").value;
+          var Sdate = document.getElementById("Sdate").value;
+          var phone = document.getElementById("phone").value;
+          var Edate = document.getElementById("Edate").value; 
+          var isValid = true;
+
+          if (name === "" || amount === "" || Edate === "" || ssn === "" || phone === "Gender" || Sdate ===  "") 
+            isValid = false;
+    
+          if (isValid) {
+            document.getElementById("confirmationMessage").innerText = "Form submitted successfully!";
+            document.getElementById("confirmationOverlay").style.display = "flex";
+            document.getElementById("myForm").reset();
+          }
+        }
+        function closeConfirmation() {
+      document.getElementById("confirmationOverlay").style.display = "none";
+    }
+      </script>
+
 </body>
 </html>
