@@ -8,10 +8,7 @@ const dummyData = {
     pageNotFound: { issue: "Page Not Found" },
     slowLoading: { issue: "Slow Loading" }
   };
-  
-  
-  
-
+ 
 function updateForm(application) {
     const data = dummyData[application];
     const inputFields = form.querySelectorAll("input");
